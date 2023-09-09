@@ -3,6 +3,11 @@ import Image from 'next/image'
 
 import { Card } from '@/components/Card'
 import { SimpleLayout } from '@/components/SimpleLayout'
+import logoLearningWithAi from '@/images/logos/learning.png'
+import logoConvertdfile from '@/images/logos/convertdfile.png'
+import logoGithub from '@/images/logos/github.png'
+import logoVercel from '@/images/logos/vercel.png'
+import logoWallet from '@/images/logos/wallet.png'
 import logoAnimaginary from '@/images/logos/animaginary.svg'
 import logoCosmos from '@/images/logos/cosmos.svg'
 import logoHelioStream from '@/images/logos/helio-stream.svg'
@@ -11,39 +16,49 @@ import logoPlanetaria from '@/images/logos/planetaria.svg'
 
 const projects = [
   {
-    name: 'Planetaria',
+    name: 'Learning With AI',
     description:
-      'Creating technology to empower civilians to explore space on their own terms.',
-    link: { href: 'http://planetaria.tech', label: 'planetaria.tech' },
-    logo: logoPlanetaria,
+      'Best AI for Homework, Tutoring, Debugging, and Image Generation',
+    note: 'Developed a cutting-edge AI that learns around YOU. Sensei is a meld of the top AI systems in the world, and is trained to ask you followup questions (that you may not know to ask) to help you unlock your infinite learning potential.',
+    link: { href: 'https://learningwith.ai', label: 'learningwith.ai' },
+    logo: logoLearningWithAi,
   },
   {
-    name: 'Animaginary',
-    description:
-      'High performance web animation library, hand-written in optimized WASM.',
-    link: { href: '#', label: 'github.com' },
-    logo: logoAnimaginary,
+    name: 'Convertdfile',
+    description: 'High performance image conversion tool.',
+    note: "I developed an image conversion website using Django for the back-end. The real game-changer was integrating Aspose.Words (imported as 'aw') for converting images to various document formats. This made conversions not only faster but also more reliable.",
+    link: {
+      href: 'https://convertdfile.pythonanywhere.com/',
+      label: 'convertdfile.com',
+    },
+    logo: logoConvertdfile,
   },
   {
-    name: 'HelioStream',
-    description:
-      'Real-time video streaming library, optimized for interstellar transmission.',
-    link: { href: '#', label: 'github.com' },
-    logo: logoHelioStream,
+    name: 'Book Reader',
+    description: 'Real-time book reading and podcast video with transcript.',
+    note: "I built a multi-media platform using Django, where users can enjoy both e-books and podcast videos. The unique feature is the synchronized transcript alongside the podcast video, offering a seamless experience for those who like to read while they listen. It's your all-in-one digital library.",
+    link: {
+      href: 'https://github.com/Ocolus1/online-book-podcast',
+      label: 'github.com',
+    },
+    logo: logoGithub,
   },
   {
-    name: 'cosmOS',
-    description:
-      'The operating system that powers our Planetaria space shuttles.',
-    link: { href: '#', label: 'github.com' },
-    logo: logoCosmos,
+    name: 'Comment With Polygon',
+    description: 'Real-time blockchain public chat app',
+    note: 'I developed an online public forum using React with TypeScript for the front-end. The defining feature was integrating Polygon, enabling users with a Polygon address to engage in discussions. To enhance the user experience and design, I utilized Chakra UI, ensuring a seamless and aesthetically pleasing interface.',
+    link: {
+      href: 'https://comments-with-polygon-five.vercel.app/',
+      label: 'comments-with-polygon.app',
+    },
+    logo: logoVercel,
   },
   {
-    name: 'OpenShuttle',
-    description:
-      'The schematics for the first rocket I designed that successfully made it to orbit.',
-    link: { href: '#', label: 'github.com' },
-    logo: logoOpenShuttle,
+    name: 'Goerli-based wallet',
+    description: 'Goerli-based blockchain wallet for secure transactions',
+    note: "I designed and developed a fundamental blockchain wallet application, equipped with functionalities that enable users to either create a new account or recover an existing one. One of its standout features is the ability to send tokens seamlessly.",
+    link: { href: 'https://aqua-wallet.vercel.app/', label: 'aqua-wallet.app' },
+    logo: logoWallet,
   },
 ]
 
@@ -89,7 +104,12 @@ export default function Projects() {
               <h2 className="mt-6 text-base font-semibold text-zinc-800 dark:text-zinc-100">
                 <Card.Link href={project.link.href}>{project.name}</Card.Link>
               </h2>
-              <Card.Description>{project.description}</Card.Description>
+              <Card.Description >
+                <p className="flex flex-col justify-between h-52"> 
+                  <p >{project.description} </p> 
+                  <p> {project.note} </p> 
+                </p>
+                </Card.Description>
               <p className="relative z-10 mt-6 flex text-sm font-medium text-zinc-400 transition group-hover:text-teal-500 dark:text-zinc-200">
                 <LinkIcon className="h-6 w-6 flex-none" />
                 <span className="ml-2">{project.link.label}</span>

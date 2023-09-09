@@ -24,6 +24,7 @@ import image5 from '@/images/photos/image-5.jpg'
 import { formatDate } from '@/lib/formatDate'
 import { generateRssFeed } from '@/lib/generateRssFeed'
 import { getAllArticles } from '@/lib/getAllArticles'
+import React from 'react'
 
 function MailIcon(props) {
   return (
@@ -86,9 +87,16 @@ function ArrowDownIcon(props) {
 
 function Article({ article }) {
   return (
-    <Card as="article">
-      <Card.Title href={`${article.link}`}>{article.title}</Card.Title>
-      <Card.Eyebrow as="time" dateTime={article.date} decorate>
+    <Card as="article" className={undefined}>
+      <Card.Title href={`${article.link}`}>
+        {article.title}
+      </Card.Title>
+      <Card.Eyebrow
+        className={undefined}
+        as="time"
+        dateTime={article.date}
+        decorate
+      >
         {article.date}
       </Card.Eyebrow>
       <Card.Description>{article.content}</Card.Description>
@@ -124,7 +132,7 @@ let articles_list = [
 
 function SocialLink({ icon: Icon, ...props }) {
   return (
-    <Link className="group -m-1 p-1" {...props}>
+    <Link href={''} className="group -m-1 p-1" {...props}>
       <Icon className="h-6 w-6 fill-zinc-500 transition group-hover:fill-zinc-600 dark:fill-zinc-400 dark:group-hover:fill-zinc-300" />
     </Link>
   )
@@ -151,7 +159,7 @@ function Newsletter() {
           required
           className="min-w-0 flex-auto appearance-none rounded-md border border-zinc-900/10 bg-white px-3 py-[calc(theme(spacing.2)-1px)] shadow-md shadow-zinc-800/5 placeholder:text-zinc-400 focus:border-teal-500 focus:outline-none focus:ring-4 focus:ring-teal-500/10 dark:border-zinc-700 dark:bg-zinc-700/[0.15] dark:text-zinc-200 dark:placeholder:text-zinc-500 dark:focus:border-teal-400 dark:focus:ring-teal-400/10 sm:text-sm"
         />
-        <Button type="submit" className="ml-4 flex-none">
+        <Button type="submit" className="ml-4 flex-none" href={undefined}>
           Join
         </Button>
       </div>
