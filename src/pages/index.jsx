@@ -107,12 +107,20 @@ function Article({ article }) {
 
 let articles_list = [
   {
-    date: 'Dec 29, 2022',
-    link: 'https://medium.com/dev-genius/blockchain-the-journey-of-thousand-miles-begins-with-a-first-step-9e72395de573?source=your_stories_page-------------------------------------',
+    date: 'Sep 18, 2023',
+    link: 'https://medium.com/@paulawolesi/from-interview-prep-to-in-depth-django-mastery-a-comprehensive-guide-95afcc7ab97b',
     title:
-      'Blockchain: The Journey of thousand miles begins with a first step.',
+      'From Interview Prep to In-Depth Django Mastery: A Comprehensive Guide',
     content:
-      'Blockchain technology has always fascinated me, and my curiosity peaked in 2020 when I had the opportunity to work on a blockchain project…',
+      'When preparing for a critical software interview, I dove deep into the world of Django. My objective was simple: gain a solid grasp of some…',
+  },
+  {
+    date: 'Sep 11, 2023',
+    link: 'https://medium.com/@paulawolesi/the-allure-of-flexibility-the-freelance-revolution-and-the-power-of-choice-cb05ebecba72',
+    title:
+      'The Allure of Flexibility: The Freelance Revolution and the Power of Choice',
+    content:
+      'There’s a shift happening. Across the globe, professionals are pivoting from the 9-to-5 grind to the boundless expanse of freelance work…',
   },
   {
     date: 'Oct 29, 2022',
@@ -302,7 +310,7 @@ export default function Home() {
               icon={GitHubIcon}
             />
             <SocialLink
-              href="https://www.linkedin.com/in/paul-awolesi-b4150a183/"
+              href="https://www.linkedin.com/in/paul-awolesi/"
               aria-label="Follow on LinkedIn"
               icon={LinkedInIcon}
             />

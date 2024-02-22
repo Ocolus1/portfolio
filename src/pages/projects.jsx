@@ -8,6 +8,7 @@ import logoConvertdfile from '@/images/logos/convertdfile.png'
 import logoGithub from '@/images/logos/github.png'
 import logoVercel from '@/images/logos/vercel.png'
 import logoWallet from '@/images/logos/wallet.png'
+import HotTub from '@/images/logos/hot-tub.png'
 import logoAnimaginary from '@/images/logos/animaginary.svg'
 import logoCosmos from '@/images/logos/cosmos.svg'
 import logoHelioStream from '@/images/logos/helio-stream.svg'
@@ -28,8 +29,8 @@ const projects = [
     description: 'High performance image conversion tool.',
     note: "I developed an image conversion website using Django for the back-end. The real game-changer was integrating Aspose.Words (imported as 'aw') for converting images to various document formats. This made conversions not only faster but also more reliable.",
     link: {
-      href: 'https://convertdfile.pythonanywhere.com/',
-      label: 'convertdfile.com',
+      href: 'https://github.com/Ocolus1/img_convert',
+      label: 'github.com',
     },
     logo: logoConvertdfile,
   },
@@ -56,9 +57,19 @@ const projects = [
   {
     name: 'Goerli-based wallet',
     description: 'Goerli-based blockchain wallet for secure transactions',
-    note: "I designed and developed a fundamental blockchain wallet application, equipped with functionalities that enable users to either create a new account or recover an existing one. One of its standout features is the ability to send tokens seamlessly.",
+    note: 'I designed and developed a fundamental blockchain wallet application, equipped with functionalities that enable users to either create a new account or recover an existing one. One of its standout features is the ability to send tokens seamlessly.',
     link: { href: 'https://aqua-wallet.vercel.app/', label: 'aqua-wallet.app' },
     logo: logoWallet,
+  },
+  {
+    name: 'Hot Tub Prescription',
+    description: 'Patient-Clinician Prescription Tool',
+    note: "I am proud to present HotTubPrescription.com, a groundbreaking website designed to streamline the process of obtaining a doctor's prescription for the purchase of a medical device, specifically a hot tub, for therapeutic reasons. ",
+    link: {
+      href: 'https://www.hottubprescription.com/',
+      label: 'HotTubPrescription.com',
+    },
+    logo: HotTub,
   },
 ]
 
